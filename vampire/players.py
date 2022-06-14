@@ -1,5 +1,6 @@
 from random import randint, shuffle
 from . import game
+from . import utils
 
 class Sheet:
     '''
@@ -42,7 +43,7 @@ class Sheet:
         points_table_attr = [ 7, 5, 3 ]
         points_table_abil = [ 9, 7, 5 ]
 
-        self.name = self.define_name()
+        self.name = utils.define_name()
         self.player_type = player_type
         self.bloodpool = 10
         self.willpower = randint(3, 10)
@@ -77,15 +78,7 @@ class Sheet:
                 points_total -= 1
             loop += 1
 
-    def define_name(self):
-        full_name = ""
-        names_size = len(game.FIRST_NAMES)
-        choosen_number = randint(0, names_size - 1)
-        full_name = str(game.FIRST_NAMES[choosen_number]).capitalize()
-        names_size = len(game.LAST_NAMES)
-        choosen_number = randint(0, names_size - 1)
-        full_name = full_name + " " + str(game.LAST_NAMES[choosen_number]).capitalize()
-        return full_name
+
 
     def dice_penalty(self):
         return game.HEALTH[game.HEALTH_TOTAL - self.get_health()]['penalty']

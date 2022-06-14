@@ -21,7 +21,17 @@ output:
 :. - abils   -> academics: 1, finance: 2, investigation: 2, medicine: 0, occult: 0
 :. [Phillip Baker] -> health: 14, is_dead: False, humanity: 9, willpower: 6, bloodpool: 10 / 10, penalty: 0
 ```
+---
 
+## Vampire Sheets
+```python
+import vampire as vampire_game
+human = vampire_game.game.battle([Human, Vampire])
+human.greet()
+```
+
+output:
+```txt
 -> action: the Vampire with name Lucas Norman says "Hello.."
 :. - attrs   -> force: 2, dexterity: 5, stamina: 2
 :. - attrs   -> charisma: 3, manipulation: 3, appearence: 1
@@ -30,12 +40,11 @@ output:
 :. - abils   -> animal ken: 2, drive: 3, firearms: 4, melee: 0, stealth: 0
 :. - abils   -> academics: 2, finance: 3, investigation: 0, medicine: 0, occult: 0
 :. [Lucas Norman] -> health: 14, is_dead: False, humanity: 6, willpower: 4, bloodpool: 10 / 11, penalty: 0
-
-```python
-import vampire as vampire_game
-human = vampire_game.game.battle([Human, Vampire])
-human.greet()
 ```
+
+---
+
+## Combat Example
 
 ```txt
 Phillip Baker rolling a dice for inititive (1, [3, 10, 1, 9], 6)...
@@ -729,3 +738,6 @@ Phillip Baker rolling a dice for absorb (0, [3, 5, 2, 2, 5, 4], 6)...
 :. Human "Phillip Baker" -> health: 0, is_dead: True, humanity: 9, willpower: 6, bloodpool: 10 / 10, penalty: -100
 -> The Human with name Phillip Baker died!
 ```
+
+## Ideas
+

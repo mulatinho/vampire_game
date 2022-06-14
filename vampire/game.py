@@ -3,21 +3,6 @@ import time
 from . import players
 from . import utils
 
-FIRST_NAMES = [
-    "John", "Armand", "Carlo", "Italo", "Lucas", "Carolina",
-    "Cristina", "Adele", "Phillip", "Boris", "Katerina",
-    "Ulysses", "Randal", "Arnold", "Nathaniel", "Bartholomew",
-    "Abigale", "Yolanthe", "Ada", "Thalia", "Kafara"
-]
-
-LAST_NAMES = [
-    "Beckett",  "Browne", "Klein", "Kimball", "Norman", "Payne",
-    "Zimmerman", "Nuemann", "Cosimo", "MacQuoid", "Drogo", "Baratheon",
-    "BAKER", "GONZALEZ", "CARTER", "MITCHELL", "PEREZ", "CAMPBELL", 
-    "EDWARDS", "COLLINS", "STEWART", "SANCHEZ", "RIVERA", "TORRES",
-    "RAMIREZ"
-]
-
 HEALTH = [
     { "name": "Bruised", "penalty": 0 },
     { "name": "Bruised", "penalty": 0 },
@@ -54,6 +39,13 @@ BLOOD_DISCIPLINE = 0
 ATTACK_BASHING = 1
 ATTACK_LETHAL = 2
 ATTACK_AGGRAVATED = 3
+
+SECRET_F = 0
+SECRET_E = 1
+SECRET_D = 2
+SECRET_C = 3
+SECRET_B = 4
+SECRET_A = 5
 
 def battle(opponents=[]):
     end_battle = False
