@@ -194,7 +194,7 @@ class Faction:
 
     def delete_member(self, member):
         if member in self.__members:
-            self.__leaders.remove(member)
+            self.__members.remove(member)
 
     def delete_leader(self, leader):
         if leader in self.__leaders:
