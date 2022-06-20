@@ -185,10 +185,20 @@ class Faction:
         print(f'Faction {name}')
 
     def create_member(self, member):
-        self.__members.append(member)
+        if member not in self.__members:
+            self.__members.append(member)
 
     def create_leader(self, leader):
-        self.__leaders.append(leader)
+        if leader not in self.__leaders:
+            self.__leaders.append(leader)
+
+    def delete_member(self, member):
+        if member in self.__members:
+            self.__leaders.remove(member)
+
+    def delete_leader(self, leader):
+        if leader in self.__leaders:
+            self.__leaders.remove(leader)
 
     def set_name(self, name):
         self.__name = name
