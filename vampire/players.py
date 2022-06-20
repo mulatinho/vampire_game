@@ -173,3 +173,31 @@ class Vampire(Person):
     def sobrenatural(self):
         if self.get_health() <= game.HEALTH_INJURED:
             self.spend_blood(motive=game.BLOOD_HEALTH)
+
+
+class Faction:
+    __name = ""
+    __members = []
+    __leaders = []
+
+    def __init__(self, name=None):
+        self.__name = name
+        print(f'Faction {name}')
+
+    def create_member(self, member):
+        self.__members.append(member)
+
+    def create_leader(self, leader):
+        self.__leaders.append(leader)
+
+    def set_name(self, name):
+        self.__name = name
+
+    def get_name(self):
+        return self.__name
+
+    def size_leaders(self):
+        return len(self.__leaders)
+
+    def size_members(self):
+        return len(self.__members)
