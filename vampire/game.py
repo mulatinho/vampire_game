@@ -47,6 +47,23 @@ SECRET_C = 3
 SECRET_B = 4
 SECRET_A = 5
 
+class Weapon:
+    __name = ""
+    __ammunition = 0
+    __damage = 0
+    
+    def __init(self):
+        pass
+
+
+class Influence:
+    pass
+
+
+class Secret:
+    pass
+
+
 def battle(opponents=[]):
     end_battle = False
     print(f'there is a battle starting... ')
